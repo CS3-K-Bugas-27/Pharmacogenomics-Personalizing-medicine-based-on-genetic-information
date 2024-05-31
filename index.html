@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pharmacogenomics: Personalizing medicine based on genetic information.</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=High+Cruiser&display=swap">
+</head>
+
+<body>
+    <video id="bg" autoplay muted loop>
+        <source src="cooked.mp4" type="video/mp4">
+    </video>
+    <div class="navbar"> <!--navigation bar-->
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="signup.html">Signup</a>
+        <a href="contact.html">Contact</a>
+        <a href="citations.html">Citations</a>
+    </div>
+    <div class="content">
+        <h3>ALL ABOUT:</h3>
+        <h2>PHARMACOGENOMICS</h2>
+        <p>Personalizing medicine based on genetic information.</p>
+        <a href="page1.html">
+            <button class="button">Get Started!</button>
+        </a>
+    </div>
+    <script></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: black;
+            overflow-y: scroll;
+            font-family: 'High Cruiser';
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: fill;
+            z-index: -1;
+            opacity: 1;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 10%;
+            color: white;
+            display: flex;
+        }
+
+        .navbar a {
+            font-size: 10px;
+            margin: 0px 20px;
+            text-align: center;
+            color: #ec1e79;
+            text-decoration: none;
+            padding: 20px;
+        }
+
+        .navbar a:first-child {
+            margin-left: auto;
+        }
+
+        .navbar a:hover {
+            color: red;
+        }
+
+        .content {
+            padding-top: 230px;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 50px;
+            color: white;
+            margin: 10px 0;
+            line-height: 1;
+        }
+
+        .content h3 {
+            font-size: 40px;
+            color: white;
+            margin: 10px 0;
+            line-height: 1;
+        }
+
+        .content p {
+            font-size: 30px;
+            color: white;
+            margin: 10px 0;
+            line-height: 1;
+        }
+
+        .button {
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 20px;
+            display: block;
+            margin: 20px auto 0;
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Signup Form</title>
+</head>
+
+<body>
+    <div class="navbar"><!-- navigation bar-->
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="signup.html">Signup</a>
+        <a href="contact.html">Contact</a>
+        <a href="citations.html">Citations</a>
+    </div>
+    <h2>Signup Form</h2> <!-- referenced from previous FA's-->
+    <form id="signup-form">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="username">Preferred Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="pass">Password:</label><br>
+        <input type="password" id="pass" name="pass"><br>
+        <label for="pass2">Confirm Password:</label><br>
+        <input type="password" id="pass2" name="pass2"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <button type="submit" onclick="submitForm()">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+
+<script>
+    function submitForm() { //declared a function
+        const name = document.getElementById('name').value; //gets the values
+        const username = document.getElementById('username').value;
+        const pass = document.getElementById('pass').value;
+        const pass2 = document.getElementById('pass2').value;
+        const email = document.getElementById('email').value;
+
+        localStorage.setItem('name', name); //stores it
+        localStorage.setItem('username', username);
+        localStorage.setItem('pass', pass);
+        localStorage.setItem('pass2', pass2);
+        localStorage.setItem('email', email);
+
+        alert('Welcome, ' + username + '!');
+        return false;
+    }
+
+
+    window.onload = function () { //retrieve the stored values from the local storage
+        document.getElementById('name').value = localStorage.getItem('name') || '';
+        document.getElementById('username').value = localStorage.getItem('username') || '';
+        document.getElementById('pass').value = localStorage.getItem('pass') || '';
+        document.getElementById('pass2').value = localStorage.getItem('pass2') || '';
+        document.getElementById('email').value = localStorage.getItem('email') || '';
+    }
+</script>
+
+</html>
+<style>
+    body {
+        padding: 50px;
+        position: relative;
+        background-color: rgba(21, 21, 29, 255);
+        color: white;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 10%;
+        color: white;
+        display: flex;
+    }
+
+    .navbar a {
+        font-size: 10px;
+        margin: 0 20px;
+        text-align: center;
+        color: #ec1e79;
+        text-decoration: none;
+        padding: 20px;
+    }
+
+    .navbar a:first-child {
+        margin-left: auto;
+    }
+
+    .navbar a:hover {
+        color: rgb(255, 0, 162);
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    form {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    input[type="text"] {
+        color: white;
+        background-color: rgba(21, 21, 29, 255);
+        border: 1px solid rgb(255, 0, 162);
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+
+    }
+
+    input[type="password"] {
+        color: white;
+        background-color: rgba(21, 21, 29, 255);
+        border: 1px solid rgb(255, 0, 162);
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+
+    }
+
+    input[type="email"] {
+        color: white;
+        background-color: rgba(21, 21, 29, 255);
+        border: 1px solid rgb(255, 0, 162);
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        color: white;
+        background-color: rgba(21, 21, 29, 255);
+        border: 1px solid rgb(255, 0, 162);
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: rgb(255, 0, 162);
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+</style>
+
+</html>
